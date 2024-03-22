@@ -1,13 +1,14 @@
 #include <stdio.h>
 int main(){
-int hora;
-printf("Digite a hora (entre 0 e 23):\n");
-scanf("%i", &hora);
-
-
-if ((hora >= 18 && hora <= 23) || (hora >= 0 && hora <= 5))
+float compras, imposto;
+printf("Digite o valor das compras:\n");
+scanf("%f", &compras);
+if (compras > 500)
 {
-    printf("Escuro");
+    imposto = (compras - 500) * 0.5;
+    printf("O valor de imposto e: %.2f", imposto);
+}else{
+    printf("O valor de imposto e: 0");
 }
 
 return 0;
